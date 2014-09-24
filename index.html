@@ -66,35 +66,7 @@ var ctrl;
 var timeout;
 var fps=0;
 
-//code hier1
-
-function anim()
-	{
-	mouse_x=cursor_x-x;
-	mouse_y=cursor_y-y;
-	context.fillRect(0,0,w,h);
-	for(var i=0;i<n;i++)
-		{
-		test=true;
-		star_x_save=star[i][3];
-		star_y_save=star[i][4];
-		star[i][0]+=mouse_x>>4; if(star[i][0]>x<<1) { star[i][0]-=w<<1; test=false; } if(star[i][0]<-x<<1) { star[i][0]+=w<<1; test=false; }
-		star[i][1]+=mouse_y>>4; if(star[i][1]>y<<1) { star[i][1]-=h<<1; test=false; } if(star[i][1]<-y<<1) { star[i][1]+=h<<1; test=false; }
-		star[i][2]-=star_speed; if(star[i][2]>z) { star[i][2]-=z; test=false; } if(star[i][2]<0) { star[i][2]+=z; test=false; }
-		star[i][3]=x+(star[i][0]/star[i][2])*star_ratio;
-		star[i][4]=y+(star[i][1]/star[i][2])*star_ratio;
-		if(star_x_save>0&&star_x_save<w&&star_y_save>0&&star_y_save<h&&test)
-			{
-			context.lineWidth=(1-star_color_ratio*star[i][2])*2;
-			context.beginPath();
-			context.moveTo(star_x_save,star_y_save);
-			context.lineTo(star[i][3],star[i][4]);
-			context.stroke();
-			context.closePath();
-			}
-		}
-	timeout=setTimeout('anim()',fps);
-	}
+// hier1
 
 function move(evt)
 	{
