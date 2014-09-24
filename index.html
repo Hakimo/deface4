@@ -66,28 +66,7 @@ var ctrl;
 var timeout;
 var fps=0;
 
-function init()
-	{
-	var a=0;
-	for(var i=0;i<n;i++)
-		{
-		star[i]=new Array(5);
-		star[i][0]=Math.random()*w*2-x*2;
-		star[i][1]=Math.random()*h*2-y*2;
-		star[i][2]=Math.round(Math.random()*z);
-		star[i][3]=0;
-		star[i][4]=0;
-		}
-	var starfield=$i('starfield');
-	starfield.style.position='absolute';
-	starfield.width=w;
-	starfield.height=h;
-	context=starfield.getContext('2d');
-	//context.lineCap='round';
-	context.fillStyle='rgb(0,0,0)';
-	context.strokeStyle='rgb(255,255,255)';
-	
-	}
+//code hier1
 
 function anim()
 	{
